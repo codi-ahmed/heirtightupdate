@@ -838,6 +838,27 @@ backgrounds
 
 /* -------------------------------------------
 
+Code for vedio
+
+------------------------------------------- */
+
+
+
+.video-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-heirtight {
+  width: 200%;
+  object-fit: cover;
+   transform: translateX(-23%);
+}
+
+
+/* -------------------------------------------
+
 spaces
 
 ------------------------------------------- */
