@@ -838,10 +838,51 @@ backgrounds
 
 /* -------------------------------------------
 
-Code for vedio
+Hero Section
 
 ------------------------------------------- */
 
+
+.hero-inner-section{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.hero-left-section{
+  width: 100%;
+}
+
+.hero-right-section{
+  width: 30%;
+  position: absolute;
+  right: 0;
+  bottom: 200px;
+  overflow: hidden;
+  z-index: -1;
+
+}
+
+.hero-section-vedio{
+  width: 200%;
+  object-fit: cover;
+   transform: translateX(-23%);
+}
+
+
+@media screen and (max-width:992px){
+  .hero-right-section{
+    display: none;
+  }
+  
+}
+
+/* -------------------------------------------
+
+Code for vedio
+
+------------------------------------------- */
 
 
 .video-container {
@@ -1987,6 +2028,7 @@ dodecahedron
   -webkit-animation: jump 10s linear infinite;
           animation: jump 10s linear infinite;
   pointer-events: none;
+  z-index: 1;
 }
 
 .mil-animation {
