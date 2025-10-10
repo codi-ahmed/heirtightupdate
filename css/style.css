@@ -855,10 +855,10 @@ Hero Section
 }
 
 .hero-right-section{
-  width: 30%;
+  width: 40%;
   position: absolute;
   right: 0;
-  bottom: 200px;
+  bottom: 170px;
   overflow: hidden;
   z-index: -1;
 
@@ -2028,7 +2028,7 @@ dodecahedron
   -webkit-animation: jump 10s linear infinite;
           animation: jump 10s linear infinite;
   pointer-events: none;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .mil-animation {
