@@ -2017,6 +2017,68 @@ lines
 
 /* -------------------------------------------
 
+Faq segment
+
+------------------------------------------- */
+
+.faq-container {
+ 
+      max-width: 900px;
+      
+      height: auto;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+        border: 5px solid rgb(255, 152, 0);
+      padding: 10px 0;
+      background-color: white;
+      min-height: 50px;
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+
+    .faq-question {
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-size: 16px;
+      font-weight: 400;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: black;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      font-size: 14px;
+      color: grey;
+      padding-left: 1rem;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+      margin-top: 5px;
+    }
+
+    .arrow {
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .arrow {
+      transform: rotate(90deg); /* Arrow points downward */
+    }
+
+/* -------------------------------------------
+
 dodecahedron
 
 ------------------------------------------- */
