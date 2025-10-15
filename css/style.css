@@ -2033,7 +2033,7 @@ Faq segment
     }
 
     .faq-item {
-        border: 5px solid rgb(255, 152, 0);
+        /* border: 5px solid rgb(255, 152, 0); */
       padding: 10px 0;
       background-color: white;
       min-height: 50px;
