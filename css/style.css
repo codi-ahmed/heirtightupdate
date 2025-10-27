@@ -844,6 +844,64 @@ backgrounds
   z-index: 8 !important;
   position: relative;
 }
+/* -------------------------------------------
+Sandwich anemation
+
+------------------------------------------- */
+
+.animated-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 18px;
+  position: relative;
+}
+
+.list-item {
+  position: relative;
+  padding-left: 20px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.list-item p {
+  margin: 0;
+  font-size: 20px;
+  color: black;
+}
+
+.list-item .bubbles {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  
+}
+
+.list-item .bubbles span {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--bubble-color);
+  color: white;
+  font-size: 13px;
+  text-transform: uppercase;
+  opacity: 1;
+  transform: translateY(0);
+  animation: float 3s infinite ease-in-out;
+}
+
+/* Floating animation variation */
+.list-item .bubbles span:nth-child(2) { animation-duration: 3.5s; }
+.list-item .bubbles span:nth-child(3) { animation-duration: 2.8s; }
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+
 
 /* -------------------------------------------
 
@@ -2672,24 +2730,58 @@ Hover texted
 
 ------------------------------------------- */
 
+.mil-cover {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Overlay background on hover */
+.mil-cover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #2e729f7c;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+/* Text styling */
 .hover-text {
-            opacity: 0;
-            padding: 5px;
-            transition: opacity 0.4s ease;
-            color:  black;
-            text-align: center;
-            font-size: 16px;
-        }
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 2; /* Above overlay */
+    text-transform: capitalize;
+}
 
+/* Hover effect */
 .mil-portfolio-item:hover .hover-text {
-            opacity: 1;
-        }
+    opacity: 1;
+}
 
+.mil-portfolio-item:hover .mil-cover::after {
+    opacity: 0.85; /* Overlay visibility */
+}
+
+/* Mobile: always show text & overlay */
 @media (max-width:1024px){
-.hover-text{
-  opacity: 1;
+    .hover-text {
+        opacity: 1;
+    }
+    .mil-cover::after {
+        opacity: 0.85;
+    }
 }
-}
+
 
 
 
