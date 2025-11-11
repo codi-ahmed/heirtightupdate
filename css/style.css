@@ -933,7 +933,7 @@ Hero Section
 }
 
 .hero-section-vedio{
-  width: 200%;
+  width: 100%;
   object-fit: cover;
    transform: translateX(-23%);
 }
